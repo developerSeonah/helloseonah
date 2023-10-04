@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.flex {
+    width: 800px;
+    height: 300px;
+    background-color: blue;
+    color: #fff;
+    /* 
+        css의 상속
+        폰트나, 색상 관련된 속성은 자식으로 상속
+    */
+    display: flex;
+    /* 정렬하고 싶은 자식의 부모에게 주는 속성 */
+}
+
+ul > li {
+    background-color: rgb(255, 255, 195);
+    border: 1px solid #000;
+}
+
+ul.flex li {
+    background-color: ;
+}
+
+
+div.flex {
+    flex-direction: column;
+    justify-content: center;
+    /* align-items (수직) */
+    align-items: center;
+    /* justify-content (수평) */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* 
+        부모 요소 크기만큼 크기를 늘리려는  stretch 때문에 여백이 생김, 여백이 싫다면 -> 부모 요소 크기를 없애고 패딩, 마진,  gap 등을 활용하여 부모 요소의 크기를 동적으로 (변화가 쉬운)
+    */
+}
+
+div.flex > div {
+    width: 300px;
+    background-color: black;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+    display : flex => ?
+        1. 블록태그를 인라인-블록 태그 처럼 수평 정렬 
+        2. 가로 세로 가운데 정렬
+        3. 4단 배열, 3단 배열과 같은 특정 요소의 줄바꿈
+    
+
+*/
+
+

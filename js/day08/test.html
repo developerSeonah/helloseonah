@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .on {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-item">menu-1</div>
+  <div class="menu-item">menu-2</div>
+  <div class="menu-item">menu-3</div>
+  <div class="menu-item">menu-4</div>
+  <div class="menu-item">menu-5</div>
+</body>
+<script>
+  const $menuItmes = document.querySelectorAll('.menu-item')
+  console.log($menuItmes)
+
+  // 5개의 메뉴아이템에 모두 클릭이벤트를 주기 위해서 순회
+  $menuItmes.forEach((el) => {
+    console.log(el)
+    el.addEventListener('click', (event) =>{
+      const { target } = event // const target = event.target => 구조분해할당
+        // 내가 클릭한 요소만 백그라운드를 바꾸고 싶은거에요
+        // 내가 클릭한 나머지 요소에 on class가 있다면 삭제
+
+        // 다른 요소에 on이 있으면 on class 제거
+        $menuItmes.forEach((el) => {
+          if(el.classList.contains('on')){
+            el.classList.remove('on')
+          }
+        })
+        // 내가 누른 요소에 class 추가
+        target.classList.add('on')
+        console.log(target.innerText)
+    })
+  })
+
+
+</script>
+</html>
