@@ -48,7 +48,9 @@
                                           ---------HTMLcollection, 유사배열객체
     3. document.querySelector('css선택자') ---> 단일 객체를 반환
 
-    4. document.querySelectroAll()
+    4. document.querySelectroAll('css선택자') ---> 복수 객체를 반환
+                                              --- NodeList 객체 반환, 유사배열 객체, forEach 사용이 가능
+                                              
                               
 
 -----------------------------------------------------
